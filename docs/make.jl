@@ -11,9 +11,16 @@ makedocs(;
         canonical="https://okadalabipr.github.io/biomass_docs.jl",
         assets=String[],
     ),
-    pages=[
+    pages = [
         "Home" => "index.md",
-    ],
+        "Getting started with BioMASS" => [
+            "Prerequisites and Installation" => "introduction/set_up.md",
+            "Overview" => "introduction/overview.md",
+            "Visualization of simulation results" => "introduction/visualization.md",
+            "Usage" => "introduction/usage.md",
+        ],
+        "Citation" => "citation.md"
+    ]
 )
 
 deploydocs(;
