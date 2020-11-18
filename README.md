@@ -1,3 +1,3 @@
 # biomass_docs
-
-[![Build Status](https://travis-ci.com/okadalabipr/biomass_docs.jl.svg?branch=master)](https://travis-ci.com/okadalabipr/biomass_docs.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://okadalabipr.github.io/biomass_docs.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://okadalabipr.github.io/biomass_docs.jl/dev)

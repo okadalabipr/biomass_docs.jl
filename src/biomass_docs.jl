@@ -1,5 +1,5 @@
 module biomass_docs
 
-# Write your package code here.
+# Package is just for auto-docs generation
 
-end
+end # module
