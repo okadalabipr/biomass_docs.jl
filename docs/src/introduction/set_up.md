@@ -1,6 +1,6 @@
 ## BioMASS Installation
 
-The BioMASS library is available on [pypi]().
+The BioMASS library is available on [pypi](https://pypi.python.org/pypi/biomass/).
 
 ```bash
 $ pip install biomass
@@ -17,19 +17,23 @@ We will use the "mapk_cascade" model for a quick parameter optimization and visu
 
 Start Python:
 
-`$ python3 `
+```bash
+$ python3
+```
 
-Load the model and the module required for simulation: <br>
-`$ >>> from biomass.models import mapk_cascade`
-<br>
+Load the model and the module required for simulation:
 
-`$ >>> from biomass import run_simulation`
+```python
+from biomass.models import mapk_cascade
 
-Next, run the simulation: <br>
-`
-$ >>> run_simulation(mapk_cascade, viz_type='original', show_all=False, stdev=True)
+from biomass import run_simulation
+```
 
-`
+Next, run the simulation:
+
+```python
+run_simulation(mapk_cascade, viz_type='original', show_all=False, stdev=True)
+```
 The simulation uses the visualization type "original", meaning that it applies the parameters already defined in the model.
 The simulation results will be saved in an automatically created directory "original" with the following destination:
 
@@ -40,23 +44,29 @@ Navigate to the `original` directory. Three files should have been created. Open
 You can also test a parameter optimization. Please not that the following procedure may take up to one day to complete.
 Load the optimization module:
 
-`$ >>> from biomass import optimize`
+```python
+from biomass import optimize
+```
 
 Start the optimization for one parameter set:
 
-`$ >>> optimize(mapk_cascade, 1)`
+```python
+optimize(mapk_cascade, 1)
+```
 
-After finishing, one parameter set has been generated. Please check by navigating to the mapk_cascade directory. A new directory called "out" should have been created, containing a folder called "1". This folder contains the optimization results for the optimized parameter set 1. <br>
+After finishing, one parameter set has been generated. Please check by navigating to the mapk_cascade directory. A new directory called "out" should have been created, containing a folder called "1". This folder contains the optimization results for the optimized parameter set 1.
 
 Let's visualize the optimized parameters.
 
 Type:
 
-`$ >>> from biomass import run_simulation`
+```python
+from biomass import run_simulation
 
-`$ >>> from biomass.models import mapk_cascade`
+from biomass.models import mapk_cascade
 
-`$ >>> run_simulation(mapk_cascade, viz_type='best', show_all=False, stdev=True)`
+run_simulation(mapk_cascade, viz_type='best', show_all=False, stdev=True)
+```
 
 Note: Both for parameter optimization and model simulation, your working directory needs to be the 'biomass' folder. In this example, we have only optimized one parameter set, and hence, have to choose the visualization type 'best'. You can change the visualization type to 'average' if you optimize more than one parameter set.
 We will explain the model files and functionality in more detail in the next steps.
