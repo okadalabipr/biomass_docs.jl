@@ -1,4 +1,4 @@
-# biomass_docs
+# biomass_docs.jl
 
 [![Source](https://img.shields.io/badge/source-github-blue)](https://github.com/okadalabipr/biomass)
 [![Actions Status](https://github.com/okadalabipr/biomass/workflows/Tests/badge.svg)](https://github.com/okadalabipr/biomass/actions)
