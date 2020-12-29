@@ -1,7 +1,8 @@
-# biomass_docs
+# biomass_docs.jl
 
 [![Source](https://img.shields.io/badge/source-github-blue)](https://github.com/okadalabipr/biomass)
 [![Actions Status](https://github.com/okadalabipr/biomass/workflows/Tests/badge.svg)](https://github.com/okadalabipr/biomass/actions)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/okadalabipr/biomass.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/okadalabipr/biomass/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/okadalabipr/biomass.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/okadalabipr/biomass/context:python)
 [![PyPI version](https://img.shields.io/pypi/v/biomass.svg?logo=PyPI&color=blue)](https://pypi.python.org/pypi/biomass/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/biomass.svg)](https://pypi.python.org/pypi/biomass/)
