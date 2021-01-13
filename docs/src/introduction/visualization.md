@@ -25,12 +25,15 @@ Next, load the required modules:
 from biomass.models import mapk_cascade
 
 from biomass import run_simulation
+
+# Create an executable model
+model = mapk_cascade.create()
 ```
 
 Let's visualize the results from our previous parameter optimization. Since we only calculated one parameter set, we can only choose the "best" option to do so. If you optimize more than one parameter set, you can also show the average of your parameter sets.
 
 ```python
-run_simulation(mapk_cascade, viz_type='best', show_all=False, stdev=True)
+run_simulation(model, viz_type='best', show_all=False, stdev=True)
 ```
 
 The plots have been placed in the automatically generated directory "best", and can be found in:
