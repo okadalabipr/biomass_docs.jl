@@ -1,1 +1,1 @@
-- [Imoto, H., Zhang, S. & Okada, M. A Computational Framework for Prediction and Analysis of Cancer Signaling Dynamics from RNA Sequencing Data—Application to the ErbB Receptor Signaling Pathway. _Cancers (Basel)_. **12**, 2878 (2020).](https://doi.org/10.3390/cancers12102878)
+- [Imoto, H., Zhang, S. & Okada, M. A Computational Framework for Prediction and Analysis of Cancer Signaling Dynamics from RNA Sequencing Data—Application to the ErbB Receptor Signaling Pathway. _Cancers_. **12**, 2878 (2020).](https://doi.org/10.3390/cancers12102878)
