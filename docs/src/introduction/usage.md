@@ -1,7 +1,20 @@
-## Import model
+## Create an executable model
 
 ```python
 from biomass.models import Nakakuki_Cell_2010
+
+Nakakuki_Cell_2010.show_properties()
+```
+
+```
+Model properties
+----------------
+36 species
+115 parameters, of which 75 to be estimated
+```
+
+```python
+model = Nakakuki_Cell_2010.create()
 ```
 
 ## Parameter Estimation of ODE Models (_n_ = 1, 2, 3, · · ·)
@@ -12,7 +25,7 @@ Parameters are adjusted to minimize the distance between model simulation and ex
 from biomass import optimize
 
 optimize(
-    model=Nakakuki_Cell_2010, start=1, options={
+    model=model, start=1, options={
         "popsize": 3,
         "max_generation": 1000,
         "allowable_error": 0.5,
@@ -54,7 +67,7 @@ Generation20: Best Fitness = 1.171606e+00
 from biomass import optimize_continue
 
 optimize_continue(
-    model=Nakakuki_Cell_2010, start=1, options={
+    model=model, start=1, options={
         "popsize": 3,
         "max_generation": 1000,
         "allowable_error": 0.5,
@@ -69,7 +82,7 @@ optimize_continue(
 from biomass import optimize
 
 optimize(
-    model=Nakakuki_Cell_2010, start=1, end=10, options={
+    model=model, start=1, end=10, options={
         "popsize": 5,
         "max_generation": 2000,
         "allowable_error": 0.5,
@@ -84,7 +97,7 @@ optimize(
 ```python
 from biomass.result import OptimizationResults
 
-res = OptimizationResults(Nakakuki_Cell_2010)
+res = OptimizationResults(model)
 res.to_csv()
 ```
 
@@ -93,7 +106,7 @@ res.to_csv()
 ```python
 from biomass import run_simulation
 
-run_simulation(Nakakuki_Cell_2010, viz_type='average', show_all=False, stdev=True)
+run_simulation(model, viz_type='average', show_all=False, stdev=True)
 ```
 
 **viz_type** : str
@@ -132,12 +145,12 @@ The single parameter sensitivity of each reaction is defined by
 C^{M}_{i} = d \ln{M} / d \ln{v_{i}}
 ```
 
-where ``v_{i}`` is the ``i^{th}`` reaction rate, ``v`` is reaction vector ``v`` = (``v_{1}``, ``v_{2}``, ...) and ``M`` is the signaling metric, e.g., time-integrated response, duration. Sensitivity coefficients were calculated using finite difference approximations with 1% changes in the reaction rates.
+where `v_{i}` is the `i^{th}` reaction rate, `v` is reaction vector `v` = (`v_{1}`, `v_{2}`, ...) and `M` is the signaling metric, e.g., time-integrated response, duration. Sensitivity coefficients were calculated using finite difference approximations with 1% changes in the reaction rates.
 
 ```python
 from biomass import run_analysis
 
-run_analysis(Nakakuki_Cell_2010, target='reaction', metric='integral', style='barplot')
+run_analysis(model, target='reaction', metric='integral', style='barplot')
 ```
 
 **target** : str
