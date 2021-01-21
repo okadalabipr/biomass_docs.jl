@@ -1,7 +1,7 @@
 name = "biomass_docs"
 uuid = "205506dd-e88c-4cb6-9215-66cd538617a8"
 authors = ["Hiroaki Imoto <himoto@protein.osaka-u.ac.jp>"]
-version = "0.3.0"
+version = "0.3.1"
 
 [deps]
 

@@ -3,7 +3,7 @@
 The BioMASS library is available on [pypi](https://pypi.python.org/pypi/biomass/).
 
 ```bash
-$ pip install biomass
+$ pip3 install biomass
 ```
 
 It will require Python>=3.7 to run.
