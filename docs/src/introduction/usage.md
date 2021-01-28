@@ -1,14 +1,14 @@
-## Create an executable model
+## Model Construction
 
 ```python
 from biomass.models import Nakakuki_Cell_2010
 
-Nakakuki_Cell_2010.show_properties()
+Nakakuki_Cell_2010.show_info()
 ```
 
 ```
-Model properties
-----------------
+Nakakuki_Cell_2010 information
+------------------------------
 36 species
 115 parameters, of which 75 to be estimated
 ```
@@ -109,30 +109,6 @@ from biomass import run_simulation
 run_simulation(model, viz_type='average', show_all=False, stdev=True)
 ```
 
-**viz_type** : _str_
-
-- `'average'`
-  : The average of simulation results with parameter sets in `out/`.
-
-- `'best'`
-  : The best simulation result in `out/`, simulation with `best_fit_param`.
-
-- `'original'`
-  : Simulation with the default parameters and initial values defined in `set_model.py`.
-
-- `'n(=1,2,...)'`
-  : Use the parameter set in `out/n/`.
-- `'experiment'`
-  : Draw the experimental data written in `observable.py` without simulation results.
-
-**show_all** : _bool_
-
-- Whether to show all simulation results.
-
-**stdev** : _bool_
-
-- If True, the standard deviation of simulated values will be shown (only when `viz_type == 'average'`).
-
 ![simulation_average](../assets/simulation_average.png)
 
 Points (blue diamonds, EGF; red squares, HRG) denote experimental data, solid lines denote simulations
@@ -152,40 +128,6 @@ from biomass import run_analysis
 
 run_analysis(model, target='reaction', metric='integral', style='barplot')
 ```
-
-**target** : _str_
-
-- `'reaction'`
-- `'initial_condition'`
-- `'parameter'`
-
-**metric** : _str_
-
-- `'maximum'`
-  : The maximum value.
-
-- `'minimum'`
-  : The minimum value.
-
-- `'argmax'`
-  : The time to reach the maximum value.
-
-- `'argmin'`
-  : The time to reach the minimum value.
-
-- `'timepoint'`
-  : The simulated value at the time point set via options['timepoint'].
-
-- `'duration'`
-  : The time it takes to decline below the threshold set via options['duration'].
-
-- `'integral'`
-  : The integral of concentration over the observation time.
-
-**style** : _str_
-
-- `'barplot'`
-- `'heatmap'`
 
 ![sensitivity_PcFos](../assets/sensitivity_PcFos.png)
 
